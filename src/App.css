@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('/cloud-image.png.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, p {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.weather-icon {
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.forecast-day {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  background: white;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Container for horizontal forecast layout */
+.forecast-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  color: white;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Individual forecast cards */
+.forecast-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: black; /* Updated font color */
+  min-width: 100px; /* Ensures cards maintain size */
+}
+
+.forecast-card h4 {
+  margin: 5px 0;
+}
+
+.forecast-card img {
+  width: 50px;
+  margin: 5px auto;
+}
+
+.forecast-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.forecast-card .temp {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
 }
